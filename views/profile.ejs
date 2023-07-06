@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/profile.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%-include('partials/nav.ejs')%>
+    <h1>Profile</h1>
+
+    <div class="cardContainer">
+      <div class="card">
+        <div class="cardHeader">
+          <h2>Profile</h2>
+        </div>
+        <img src="<%=user.image%>" alt="Logo" />
+        <div class="cardBody">
+          <p><strong>Full Name:</strong><%=user.fullName%></p>
+          <p><strong>Username:</strong> <%=user.username%></p>
+          <p><strong>Password:</strong> <%=user.password%></p>
+        </div>
+        <!-- Logout -->
+        <div class="cardFooter">
+          <a href="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
